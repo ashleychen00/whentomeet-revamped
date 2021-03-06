@@ -1,11 +1,18 @@
 {
 	"manifest_version": 2,
 	"name": "whentomeet revamped",
-	"version": "0.1",
+	"version": "0.2",
 	"description": "makes whentomeet easier to use",
 	"content_scripts": [
 		{
 			"matches": ["https://www.when2meet.com/*"],
-			"js": ["menu.js"]
-		}]
+			"js": ["inject.js"]
+		}],
+	"web_accessible_resources": [
+		"menu.js"
+	],
+
+	"permissions": [
+		"activeTab"
+	]
 }
