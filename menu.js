@@ -20,12 +20,16 @@ const showBestTimes = () => {
 
 // add UI components to main body of site
 
-const mainBody = document.getElementById('MainBody')
-const menu = document.createElement('div')
-menu.style.padding = '1em'
+const runExtension = () => {
+	const mainBody = document.getElementById('MainBody')
+	const menu = document.createElement('div')
+	menu.style.padding = '1em'
 
-const button = document.createElement('button')
-button.innerText = "Show Best Times"
-button.onclick = () => showBestTimes()
-menu.appendChild(button)
-mainBody.appendChild(menu)
+	const button = document.createElement('button')
+	button.innerText = "Show Best Times"
+	button.onclick = () => showBestTimes()
+	menu.appendChild(button)
+	mainBody.appendChild(menu)
+}
+
+runExtension();
